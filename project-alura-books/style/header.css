@@ -33,6 +33,7 @@
 
 .container__botao:checked ~ .lista-menu {
     display: block;
+    width: auto;
 }
 
 .lista-menu__titulo, .lista-menu__item {
@@ -52,8 +53,136 @@
     background-clip: text;
     text-transform: uppercase;
     font-weight: 400;
+    justify-content: auto;
 }
 
 .container__botao {
     display: none;
 }
+
+.container__titulo {
+    display: none;
+}
+
+.options {
+    display: none;
+}
+
+.container__botao:checked~.container__label>.cabecalho_menu_hamburger {
+    background-image: url("../images/imgHeader/MenuWhite.svg");
+}
+
+.container__botao:checked~.container__label {
+    background: var(--blue-gradient);
+}
+
+@media screen and (min-width: 1024px) {
+    .container__titulo, .container__titulo-negrito {
+        font-family: var(--font-Josefin);
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo-negrito {
+        font-weight: 700;
+    }
+
+    .options {
+        display: flex;
+
+    }
+    
+    .options__itens {
+        padding: 0 1em;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    .options__link {
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .container__imagem-favorito {
+        display: none;
+    }
+
+    .cabecalho_menu_hamburger {
+        display: none;
+    }
+
+    .options__button:checked ~ .lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .options__button {
+        display: none;
+    }
+
+    .container__texto{
+    display: none;
+    }
+
+    .options__button:checked~.options__label>.options__itens {
+        background: var(--blue-gradient);
+        color: var(--white);
+    }
+
+    .options__itens {
+        padding: 2em 1em;
+    }
+
+    .lista-menu__item:hover {
+        background: var(--blue-gradient);
+    }
+    
+    .lista-menu__item:hover > .lista-menu__link {
+        -webkit-text-fill-color: var(--white);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .cabecalho {
+        padding: 0 4em;
+    }
+
+    .container__imagem {
+        display: block;
+    }
+
+    .container__imagem-favorito {
+        display: none;
+    }
+
+    .options {
+        margin-right: 30em;
+    }
+
+    .container__texto {
+        display: block;
+    }
+
+    .banner__titulo{
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .banner__texto{
+        font-size: 16px;
+    }
+    
+}
+

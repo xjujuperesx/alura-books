@@ -15,33 +15,70 @@
     <header class="cabecalho">
         <div class="container">
             <input type="checkbox" id="menu" class="container__botao"">
-            <label for="menu">
+            <label for="menu" class="container__label">
                 <span class="cabecalho_menu_hamburger container__imagem"></span>
             </label>
-        <ul class="lista-menu">
-            <li class="lista-menu__titulo">Categorias</li>
-            <li class="lista-menu__item">
-                <a href="#" class="lista-menu__link">Programação</a>
-            </li>
-            <li class="lista-menu__item">
-                <a href="#" class="lista-menu__link">Front-End</a>
-            </li>
-            <li class="lista-menu__item">
-                <a href="#" class="lista-menu__link">Infraestrutura</a>
-            </li>
-            <li class="lista-menu__item">
-                <a href="#" class="lista-menu__link">Business</a>
-            </li>
-            <li class="lista-menu__item">
-                <a href="#" class="lista-menu__link">Design & UX</a>
-            </li>            
-        </ul>
-            <img class="container__imagem" src="/images/imgHeader/Logo.png">
+            <ul class="lista-menu">
+                <li class="lista-menu__titulo">Categorias</li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Programação</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Front-End</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Infraestrutura</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Business</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Design & UX</a>
+                </li>            
+            </ul>
+                <img class="container__imagem" src="/images/imgHeader/Logo.png">
+                <h1 class="container__titulo"><b class="container__titulo-negrito">Alura</b>Books</h1>
         </div>
+
+        <ul class="options">
+            <input type="checkbox" id="options-menu" class="options__button">
+            <label for="options-menu" class="options__label">
+                <li class="options__itens">Categorias</li>                
+            </label>
+
+            <ul class="lista-menu">
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Programação</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Front-End</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Infraestrutura</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Business</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Design & UX</a>
+                </li>            
+            </ul>
+
+            <li class="options__itens"><a href="#" class="options__link">Favoritos</a></li>
+            <li class="options__itens"><a href="#" class="options__link">Minha Estante</a></li>
+        </ul>
+
         <div class="container">
-            <a href="#"><img class="container__imagem" src="/images/imgHeader/Favoritos.png" alt="Meus favoritos"></a>
-            <a href="#"><img class="container__imagem" src="/images/imgHeader/Sacola.png" alt="Sacola de compras"></a>
-            <a href="#"><img class="container__imagem" src="/images/imgHeader/Usuario.png" alt="Meu perfil"></a>
+            <a href="#">
+                <img class="container__imagem container__imagem-favorito" src="/images/imgHeader/Favoritos.png" alt="Meus favoritos"></a>
+            <a href="#" class="container__link">
+                <img class="container__imagem" src="/images/imgHeader/Sacola.png" alt="Sacola de compras">
+                <p class="container__texto">Minha Sacola</p>
+            </a>
+            <a href="#" class="container__link">
+                <img class="container__imagem" src="/images/imgHeader/Usuario.png" alt="Meu perfil">
+                <p class="container__texto">Meu perfil</p>
+            </a>
         </div> 
     </header>
 
@@ -54,6 +91,7 @@
     <section class="carrossel">
         <h2 class="carrossel__titulo">ÚLTIMOS LANÇAMENTOS</h2>
         <!-- Slider main container -->
+    <div class="carrossel__container">
         <div class="swiper">
             <!-- Additional required wrapper -->
             <!-- If we need pagination -->
@@ -97,12 +135,14 @@
                 <a href="#" class="botoes__ancora">Saiba mais</a>
             </div>
         </div>
+    </div>
 
     </section>
 
     <section class="carrossel">
         <h2 class="carrossel__titulo">MAIS VENDIDOS</h2>
          <!-- Slider main container -->
+    <div class="carrossel__container">
          <div class="swiper">
             <!-- Additional required wrapper -->
             <!-- If we need pagination -->
@@ -147,6 +187,7 @@
                 <a href="#" class="botoes__ancora">Saiba mais</a>
             </div>
         </div>
+    </div>
     </section>
 
     <section class="topicos">
@@ -179,15 +220,92 @@
     </section>
 
     <section class="contato">
-        <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
-        <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
+        <div class="contato__descricao">
+            <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
+            <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
+        </div>
         <input class="contato__email" type="email" placeholder="Cadastre seu e-mail">
     </section>
 
     <hr />
 
     <footer class="rodape">
-        <h2>Grupo Alura</h2>
+        <h2 class="rodape__titulo rodape__principal">Grupo Alura</h2>
+        <ul class="lista-rodape">
+            <li class="lista-rodape__titulo">Educação</li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/Caelum.png" alt="Logo do Caelum">
+                <a href="#" class="lista-rodape__link">Caelum</a>
+            </li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/CasaDoCodigo.png" alt="Logo da Casa do Código">
+                <a href="#" class="lista-rodape__link">Casa do Código</a>
+            </li>
+        </ul>
+
+        <ul class="lista-rodape">
+            <li class="lista-rodape__titulo">Educação Online</li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/Alura.png" alt="Logo do Caelum">
+                <a href="#" class="lista-rodape__link">Alura</a>
+            </li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/AluraEmpresas.png" alt="Logo AluraEmpresas">
+                <a href="#" class="lista-rodape__link">Alura Para Empresas</a>
+            </li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/AluraLatam.png" alt="Logo AluraLatam">
+                <a href="#" class="lista-rodape__link">Alura LATAM</a>
+            </li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/AluraStart.png" alt="Logo AluraStart">
+                <a href="#" class="lista-rodape__link">Alura Start</a>
+            </li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/MusicDot.png" alt="Logo MusicDot>">
+                <a href="#" class="lista-rodape__link">MusicDot</a>
+            </li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/AluraLingua.png" alt="Logo AluraLingua">
+                <a href="#" class="lista-rodape__link">Alura Língua</a>
+            </li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/PM3.png" alt="Logo PM3">
+                <a href="#" class="lista-rodape__link">PM3</a>
+            </li>
+        </ul>
+
+        <ul class="lista-rodape">
+            <li class="lista-rodape__titulo">Comunidade</li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/HipstersTech.png" alt="Logo HipstersTech">
+                <a href="#" class="lista-rodape__link">Hipsters ponto Tech</a>
+            </li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/Scuba.png" alt="Logo Scuba">
+                <a href="#" class="lista-rodape__link">Scuba Dev</a>
+            </li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/Layers.png" alt="Logo Layers">
+                <a href="#" class="lista-rodape__link">Layers ponto Tech</a>
+            </li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/LikeABoss.png" alt="Logo LikeABoss">
+                <a href="#" class="lista-rodape__link">Like a Boss</a>
+            </li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/CarreiraSemFronteira.png" alt="Logo CarreiraSemFronteira">
+                <a href="#" class="lista-rodape__link">Carreira sem Fronteira</a>
+            </li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/HipstersJobs.png" alt="Logo HipstersJobs">
+                <a href="#" class="lista-rodape__link">Hipsters ponto Jobs</a>
+            </li>
+            <li class="lista-rodape__item">
+                <img src="/images/imgFooter/GUJ.png" alt="Logo GUJ">
+                <a href="#" class="lista-rodape__link">GUJ</a>
+            </li>
+        </ul>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
